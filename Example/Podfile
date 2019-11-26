@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SwiftLeeTools_Example' do
+  pod 'SwiftLeeTools', :path => '../'
+
+  target 'SwiftLeeTools_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
