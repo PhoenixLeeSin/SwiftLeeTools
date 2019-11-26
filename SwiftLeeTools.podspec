@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftLeeTools'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of SwiftLeeTools.'
 
 # This description is used to generate tags and improve search results.
@@ -18,13 +18,13 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+"iOS swift开发通用工具 包括UIKit foundation 网络封装 等"
                        DESC
 
   s.homepage         = 'https://github.com/350541732/SwiftLeeTools'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '350541732' => '350541732@qq.com' }
+  s.author           = { 'LeeSin' => '350541732@qq.com' }
   s.source           = { :git => 'https://github.com/350541732/SwiftLeeTools.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -32,11 +32,26 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'SwiftLeeTools/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'SwiftLeeTools' => ['SwiftLeeTools/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'SwiftLeeTools' => ['SwiftLeeTools/Assets/*.png']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
+  s.dependency 'Alamofire', '~> 4.7' #网络请求
+  s.dependency 'SwiftyJSON', '~> 4.0' #Json数据处理
+  s.dependency 'QorumLogs'
+  s.dependency 'SnapKit', '~> 4.0.0' #自动布局'
+  # s.dependency 'Hero'
+  #   s.dependency 'IQKeyboardManagerSwift'
+  s.dependency 'AlamofireImage'
+  #  s.dependency 'SDWebImage'
+  #  s.dependency 'DKCamera'
+  #  s.dependency 'DKPhotoGallery' #照片选取(包含SDWebImage)
+  #  s.dependency 'DKImagePickerController', '<= 4.1.4' #照片选取
+  s.dependency 'DeviceKit'               #设备信息
+  s.dependency 'ImageSlideshow/Alamofire'
+  s.dependency 'MJRefresh' #上拉刷新 下拉加载
+  s.dependency 'SwiftDate', '~> 5.1.0'  #时间工具
 end

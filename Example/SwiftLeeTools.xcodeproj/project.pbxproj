@@ -13,6 +13,27 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		B04ECC5E238D28900068957D /* DateHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC58238D28900068957D /* DateHelpViewController.swift */; };
+		B04ECC5F238D28900068957D /* ShowDeviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC5A238D28900068957D /* ShowDeviceInfoViewController.swift */; };
+		B04ECC60238D28900068957D /* ShowNetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC5C238D28900068957D /* ShowNetImageViewController.swift */; };
+		B04ECC61238D28900068957D /* ShowLocalImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC5D238D28900068957D /* ShowLocalImageViewController.swift */; };
+		B04ECC7B238D28990068957D /* StringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC63238D28980068957D /* StringViewController.swift */; };
+		B04ECC7C238D28990068957D /* VerifyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC65238D28990068957D /* VerifyDataViewController.swift */; };
+		B04ECC7D238D28990068957D /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC67238D28990068957D /* RequestViewController.swift */; };
+		B04ECC7E238D28990068957D /* Area.plist in Resources */ = {isa = PBXBuildFile; fileRef = B04ECC69238D28990068957D /* Area.plist */; };
+		B04ECC7F238D28990068957D /* Province.plist in Resources */ = {isa = PBXBuildFile; fileRef = B04ECC6A238D28990068957D /* Province.plist */; };
+		B04ECC80238D28990068957D /* ShowPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC6B238D28990068957D /* ShowPickerViewController.swift */; };
+		B04ECC81238D28990068957D /* City.plist in Resources */ = {isa = PBXBuildFile; fileRef = B04ECC6C238D28990068957D /* City.plist */; };
+		B04ECC82238D28990068957D /* ShowMyViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC6E238D28990068957D /* ShowMyViewViewController.swift */; };
+		B04ECC83238D28990068957D /* ShowMyViewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC6F238D28990068957D /* ShowMyViewDetailViewController.swift */; };
+		B04ECC84238D28990068957D /* MyScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC71238D28990068957D /* MyScrollViewController.swift */; };
+		B04ECC85238D28990068957D /* MyListMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC72238D28990068957D /* MyListMenuViewController.swift */; };
+		B04ECC86238D28990068957D /* MyWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC73238D28990068957D /* MyWebViewController.swift */; };
+		B04ECC87238D28990068957D /* MytableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC74238D28990068957D /* MytableViewViewController.swift */; };
+		B04ECC88238D28990068957D /* MyAutoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC75238D28990068957D /* MyAutoTableViewController.swift */; };
+		B04ECC89238D28990068957D /* MyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC76238D28990068957D /* MyMenuViewController.swift */; };
+		B04ECC8A238D28990068957D /* ShowLocalNotiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC78238D28990068957D /* ShowLocalNotiViewController.swift */; };
+		B04ECC8B238D28990068957D /* KeyChainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC7A238D28990068957D /* KeyChainViewController.swift */; };
 		D23D7D1100DE51370AE197D6 /* Pods_SwiftLeeTools_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFDEBA26B22B70D9D86C8ED /* Pods_SwiftLeeTools_Example.framework */; };
 		E414CA9BA44CEAA861E8B20D /* Pods_SwiftLeeTools_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD62F66B5F77A642C7273C1 /* Pods_SwiftLeeTools_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -28,7 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03C2BC4490E296939E32771F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		03C2BC4490E296939E32771F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		06F087BD3BFA2CC36761ACFE /* Pods-SwiftLeeTools_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLeeTools_Tests.release.xcconfig"; path = "Target Support Files/Pods-SwiftLeeTools_Tests/Pods-SwiftLeeTools_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		37CA9A3F5A642ECBB94331FD /* Pods-SwiftLeeTools_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLeeTools_Example.release.xcconfig"; path = "Target Support Files/Pods-SwiftLeeTools_Example/Pods-SwiftLeeTools_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwiftLeeTools_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLeeTools_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,12 +62,33 @@
 		607FACE51AFB9204008FA782 /* SwiftLeeTools_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLeeTools_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6AA6A54ADA9AEAC2E9E13DB8 /* SwiftLeeTools.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SwiftLeeTools.podspec; path = ../SwiftLeeTools.podspec; sourceTree = "<group>"; };
+		6AA6A54ADA9AEAC2E9E13DB8 /* SwiftLeeTools.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftLeeTools.podspec; path = ../SwiftLeeTools.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7840398C573A9D890B82CA7A /* Pods-SwiftLeeTools_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLeeTools_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftLeeTools_Tests/Pods-SwiftLeeTools_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		80D62711FD6A8A936B5BAE11 /* Pods-SwiftLeeTools_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLeeTools_Example.debug.xcconfig"; path = "Target Support Files/Pods-SwiftLeeTools_Example/Pods-SwiftLeeTools_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		82C20FB9D9821A6FF5DFB687 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		82C20FB9D9821A6FF5DFB687 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8BFDEBA26B22B70D9D86C8ED /* Pods_SwiftLeeTools_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLeeTools_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD62F66B5F77A642C7273C1 /* Pods_SwiftLeeTools_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLeeTools_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B04ECC58238D28900068957D /* DateHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelpViewController.swift; sourceTree = "<group>"; };
+		B04ECC5A238D28900068957D /* ShowDeviceInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDeviceInfoViewController.swift; sourceTree = "<group>"; };
+		B04ECC5C238D28900068957D /* ShowNetImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowNetImageViewController.swift; sourceTree = "<group>"; };
+		B04ECC5D238D28900068957D /* ShowLocalImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowLocalImageViewController.swift; sourceTree = "<group>"; };
+		B04ECC63238D28980068957D /* StringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringViewController.swift; sourceTree = "<group>"; };
+		B04ECC65238D28990068957D /* VerifyDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyDataViewController.swift; sourceTree = "<group>"; };
+		B04ECC67238D28990068957D /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		B04ECC69238D28990068957D /* Area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Area.plist; sourceTree = "<group>"; };
+		B04ECC6A238D28990068957D /* Province.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Province.plist; sourceTree = "<group>"; };
+		B04ECC6B238D28990068957D /* ShowPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPickerViewController.swift; sourceTree = "<group>"; };
+		B04ECC6C238D28990068957D /* City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = City.plist; sourceTree = "<group>"; };
+		B04ECC6E238D28990068957D /* ShowMyViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMyViewViewController.swift; sourceTree = "<group>"; };
+		B04ECC6F238D28990068957D /* ShowMyViewDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMyViewDetailViewController.swift; sourceTree = "<group>"; };
+		B04ECC71238D28990068957D /* MyScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyScrollViewController.swift; sourceTree = "<group>"; };
+		B04ECC72238D28990068957D /* MyListMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyListMenuViewController.swift; sourceTree = "<group>"; };
+		B04ECC73238D28990068957D /* MyWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWebViewController.swift; sourceTree = "<group>"; };
+		B04ECC74238D28990068957D /* MytableViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MytableViewViewController.swift; sourceTree = "<group>"; };
+		B04ECC75238D28990068957D /* MyAutoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAutoTableViewController.swift; sourceTree = "<group>"; };
+		B04ECC76238D28990068957D /* MyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuViewController.swift; sourceTree = "<group>"; };
+		B04ECC78238D28990068957D /* ShowLocalNotiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowLocalNotiViewController.swift; sourceTree = "<group>"; };
+		B04ECC7A238D28990068957D /* KeyChainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +135,17 @@
 		607FACD21AFB9204008FA782 /* Example for SwiftLeeTools */ = {
 			isa = PBXGroup;
 			children = (
+				B04ECC79238D28990068957D /* keychain */,
+				B04ECC77238D28990068957D /* localNoti */,
+				B04ECC70238D28990068957D /* menu */,
+				B04ECC6D238D28990068957D /* normalView */,
+				B04ECC68238D28990068957D /* pickerView */,
+				B04ECC66238D28990068957D /* request */,
+				B04ECC62238D28980068957D /* String */,
+				B04ECC64238D28990068957D /* verify */,
+				B04ECC57238D28900068957D /* dataHelp */,
+				B04ECC59238D28900068957D /* deviceInfo */,
+				B04ECC5B238D28900068957D /* image */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -139,6 +192,104 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		B04ECC57238D28900068957D /* dataHelp */ = {
+			isa = PBXGroup;
+			children = (
+				B04ECC58238D28900068957D /* DateHelpViewController.swift */,
+			);
+			path = dataHelp;
+			sourceTree = "<group>";
+		};
+		B04ECC59238D28900068957D /* deviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				B04ECC5A238D28900068957D /* ShowDeviceInfoViewController.swift */,
+			);
+			path = deviceInfo;
+			sourceTree = "<group>";
+		};
+		B04ECC5B238D28900068957D /* image */ = {
+			isa = PBXGroup;
+			children = (
+				B04ECC5C238D28900068957D /* ShowNetImageViewController.swift */,
+				B04ECC5D238D28900068957D /* ShowLocalImageViewController.swift */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		B04ECC62238D28980068957D /* String */ = {
+			isa = PBXGroup;
+			children = (
+				B04ECC63238D28980068957D /* StringViewController.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		B04ECC64238D28990068957D /* verify */ = {
+			isa = PBXGroup;
+			children = (
+				B04ECC65238D28990068957D /* VerifyDataViewController.swift */,
+			);
+			path = verify;
+			sourceTree = "<group>";
+		};
+		B04ECC66238D28990068957D /* request */ = {
+			isa = PBXGroup;
+			children = (
+				B04ECC67238D28990068957D /* RequestViewController.swift */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
+		B04ECC68238D28990068957D /* pickerView */ = {
+			isa = PBXGroup;
+			children = (
+				B04ECC69238D28990068957D /* Area.plist */,
+				B04ECC6A238D28990068957D /* Province.plist */,
+				B04ECC6B238D28990068957D /* ShowPickerViewController.swift */,
+				B04ECC6C238D28990068957D /* City.plist */,
+			);
+			path = pickerView;
+			sourceTree = "<group>";
+		};
+		B04ECC6D238D28990068957D /* normalView */ = {
+			isa = PBXGroup;
+			children = (
+				B04ECC6E238D28990068957D /* ShowMyViewViewController.swift */,
+				B04ECC6F238D28990068957D /* ShowMyViewDetailViewController.swift */,
+			);
+			path = normalView;
+			sourceTree = "<group>";
+		};
+		B04ECC70238D28990068957D /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				B04ECC71238D28990068957D /* MyScrollViewController.swift */,
+				B04ECC72238D28990068957D /* MyListMenuViewController.swift */,
+				B04ECC73238D28990068957D /* MyWebViewController.swift */,
+				B04ECC74238D28990068957D /* MytableViewViewController.swift */,
+				B04ECC75238D28990068957D /* MyAutoTableViewController.swift */,
+				B04ECC76238D28990068957D /* MyMenuViewController.swift */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
+		B04ECC77238D28990068957D /* localNoti */ = {
+			isa = PBXGroup;
+			children = (
+				B04ECC78238D28990068957D /* ShowLocalNotiViewController.swift */,
+			);
+			path = localNoti;
+			sourceTree = "<group>";
+		};
+		B04ECC79238D28990068957D /* keychain */ = {
+			isa = PBXGroup;
+			children = (
+				B04ECC7A238D28990068957D /* KeyChainViewController.swift */,
+			);
+			path = keychain;
+			sourceTree = "<group>";
+		};
 		D64CB1419A94862360C6B2DE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +298,6 @@
 				7840398C573A9D890B82CA7A /* Pods-SwiftLeeTools_Tests.debug.xcconfig */,
 				06F087BD3BFA2CC36761ACFE /* Pods-SwiftLeeTools_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +377,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -247,8 +398,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				B04ECC81238D28990068957D /* City.plist in Resources */,
+				B04ECC7E238D28990068957D /* Area.plist in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				B04ECC7F238D28990068957D /* Province.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,11 +445,29 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SwiftLeeTools_Example/Pods-SwiftLeeTools_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/QorumLogs/QorumLogs.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftLeeTools/SwiftLeeTools.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QorumLogs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLeeTools.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -331,8 +503,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B04ECC82238D28990068957D /* ShowMyViewViewController.swift in Sources */,
+				B04ECC86238D28990068957D /* MyWebViewController.swift in Sources */,
+				B04ECC87238D28990068957D /* MytableViewViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				B04ECC5F238D28900068957D /* ShowDeviceInfoViewController.swift in Sources */,
+				B04ECC83238D28990068957D /* ShowMyViewDetailViewController.swift in Sources */,
+				B04ECC8B238D28990068957D /* KeyChainViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				B04ECC80238D28990068957D /* ShowPickerViewController.swift in Sources */,
+				B04ECC7B238D28990068957D /* StringViewController.swift in Sources */,
+				B04ECC61238D28900068957D /* ShowLocalImageViewController.swift in Sources */,
+				B04ECC88238D28990068957D /* MyAutoTableViewController.swift in Sources */,
+				B04ECC7D238D28990068957D /* RequestViewController.swift in Sources */,
+				B04ECC60238D28900068957D /* ShowNetImageViewController.swift in Sources */,
+				B04ECC84238D28990068957D /* MyScrollViewController.swift in Sources */,
+				B04ECC5E238D28900068957D /* DateHelpViewController.swift in Sources */,
+				B04ECC89238D28990068957D /* MyMenuViewController.swift in Sources */,
+				B04ECC7C238D28990068957D /* VerifyDataViewController.swift in Sources */,
+				B04ECC85238D28990068957D /* MyListMenuViewController.swift in Sources */,
+				B04ECC8A238D28990068957D /* ShowLocalNotiViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
