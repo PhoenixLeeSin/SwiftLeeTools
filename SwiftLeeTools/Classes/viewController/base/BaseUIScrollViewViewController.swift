@@ -2,8 +2,8 @@
 //  BaseUIScrollViewViewController.swift
 //  TopsProSys
 //  UIScrollView基类
-//  Created by topscommmac01 on 2018/10/24.
-//  Copyright © 2018年 com.topscommmac01. All rights reserved.
+//  Created by 350541732 on 11/26/2019.
+//  Copyright (c) 2019 350541732. All rights reserved.
 //
 
 import UIKit

@@ -2,8 +2,8 @@
 //  Enums.swift
 //  ProgressWebViewController
 //
-//  Created by Zheng-Xiang Ke on 2017/10/14.
-//  Copyright © 2017年 Zheng-Xiang Ke. All rights reserved.
+//  Created by 350541732 on 11/26/2019.
+//  Copyright (c) 2019 350541732. All rights reserved.
 //
 
 import Foundation

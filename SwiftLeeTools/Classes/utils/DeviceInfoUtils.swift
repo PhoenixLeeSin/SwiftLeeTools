@@ -1,6 +1,6 @@
 //
 //  DeviceInfoUtils.swift
-//  topsiOSPro
+//  SwiftLeeTools
 //  设备以及APP相应基本信息
 //  Created by 李桂盛 on 2019/11/19.
 //

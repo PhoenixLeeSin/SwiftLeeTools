@@ -2,8 +2,8 @@
 //  BaseUIViewViewController.swift
 //  TopsProSys
 //
-//  Created by topscommmac01 on 2018/10/24.
-//  Copyright © 2018年 com.topscommmac01. All rights reserved.
+//  Created by 350541732 on 11/26/2019.
+//  Copyright (c) 2019 350541732. All rights reserved.
 //
 
 import UIKit
@@ -11,6 +11,7 @@ import SnapKit
 import Alamofire
 import SwiftyJSON
 import QorumLogs
+import JXSegmentedView
 
 open class BaseUIViewViewController: UIViewController {
 
@@ -309,7 +310,41 @@ extension BaseUIViewViewController{
                 }
             }
         }
-    
+    /// 下载视频
+      open  func downloadVideo(url:String,isShowLoading:Bool = true,backToInfoFunc:@escaping (_ url:String) -> Void) {
+            QL1(url)
+            if isShowLoading {
+                showLoading(isSupportClick: true)
+            }
+            let destination: DownloadRequest.DownloadFileDestination = { _, response in
+                let documentsURL = FileManager.default.urls(for: .documentDirectory,in: .userDomainMask)[0]
+                let fileURL = documentsURL.appendingPathComponent(response.suggestedFilename!)
+                return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
+            }
+            AlamofireManager.sharedSessionManager.download(url,method:.post,headers:AlamofireManager.getToken(),to:destination).responseData { response in
+                switch response.result {
+                case .success:
+                    if isShowLoading{
+                        self.hideHUD()
+                    }
+                    if let path = response.destinationURL?.path{
+//                        let fileType = StringUtils.getSignBackStr(str:path,sign:".").lowercased()
+//                        if fileType.hasSuffix("pdf"){
+    //                        UserDefaults.standard.set(path, forKey:url)
+                            backToInfoFunc(path)
+//                        } else {
+//                            self.loginAgain()
+//                        }
+                    }
+                case .failure(let error):
+                    if isShowLoading{
+                        self.hideHUD()
+                    }
+                    self.checkNetWrokReachability(url, error: error)
+                    QL1("downloadFile 似乎已断开与互联网的连接 failure \(error)")
+                }
+            }
+        }
     //上传图片
     open func postImageList(urlRequest:String,keys:[String],parameters:JSON,imagesArr:[Data],imagesInfoArr:[String],isShowLoading:Bool = false, backToInfoFunc : @escaping (_ map:JSON) -> Void)  {
         if isShowLoading{
@@ -385,5 +420,4 @@ extension BaseUIViewViewController{
     }
 
 }
-
 

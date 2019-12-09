@@ -34,6 +34,11 @@
 		B04ECC89238D28990068957D /* MyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC76238D28990068957D /* MyMenuViewController.swift */; };
 		B04ECC8A238D28990068957D /* ShowLocalNotiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC78238D28990068957D /* ShowLocalNotiViewController.swift */; };
 		B04ECC8B238D28990068957D /* KeyChainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC7A238D28990068957D /* KeyChainViewController.swift */; };
+		B0D9B763239DCFC3005CB4FA /* ShowFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9B762239DCFC3005CB4FA /* ShowFilterViewController.swift */; };
+		B0D9B766239DCFC7005CB4FA /* ShowAVPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9B765239DCFC7005CB4FA /* ShowAVPlayerViewController.swift */; };
+		B0D9B769239DCFC9005CB4FA /* ShowMySearchAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9B768239DCFC9005CB4FA /* ShowMySearchAndTableViewController.swift */; };
+		B0D9B76D239DCFCD005CB4FA /* ShowSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9B76B239DCFCD005CB4FA /* ShowSegmentViewController.swift */; };
+		B0D9B76E239DCFCD005CB4FA /* ListBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9B76C239DCFCD005CB4FA /* ListBaseViewController.swift */; };
 		D23D7D1100DE51370AE197D6 /* Pods_SwiftLeeTools_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFDEBA26B22B70D9D86C8ED /* Pods_SwiftLeeTools_Example.framework */; };
 		E414CA9BA44CEAA861E8B20D /* Pods_SwiftLeeTools_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD62F66B5F77A642C7273C1 /* Pods_SwiftLeeTools_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +94,11 @@
 		B04ECC76238D28990068957D /* MyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuViewController.swift; sourceTree = "<group>"; };
 		B04ECC78238D28990068957D /* ShowLocalNotiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowLocalNotiViewController.swift; sourceTree = "<group>"; };
 		B04ECC7A238D28990068957D /* KeyChainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainViewController.swift; sourceTree = "<group>"; };
+		B0D9B762239DCFC3005CB4FA /* ShowFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowFilterViewController.swift; sourceTree = "<group>"; };
+		B0D9B765239DCFC7005CB4FA /* ShowAVPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowAVPlayerViewController.swift; sourceTree = "<group>"; };
+		B0D9B768239DCFC9005CB4FA /* ShowMySearchAndTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMySearchAndTableViewController.swift; sourceTree = "<group>"; };
+		B0D9B76B239DCFCD005CB4FA /* ShowSegmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowSegmentViewController.swift; sourceTree = "<group>"; };
+		B0D9B76C239DCFCD005CB4FA /* ListBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +145,10 @@
 		607FACD21AFB9204008FA782 /* Example for SwiftLeeTools */ = {
 			isa = PBXGroup;
 			children = (
+				B0D9B76A239DCFCD005CB4FA /* segmentView */,
+				B0D9B767239DCFC9005CB4FA /* search+tableview */,
+				B0D9B764239DCFC7005CB4FA /* AVPlayer */,
+				B0D9B761239DCFC3005CB4FA /* ShowFilterView */,
 				B04ECC79238D28990068957D /* keychain */,
 				B04ECC77238D28990068957D /* localNoti */,
 				B04ECC70238D28990068957D /* menu */,
@@ -288,6 +302,39 @@
 				B04ECC7A238D28990068957D /* KeyChainViewController.swift */,
 			);
 			path = keychain;
+			sourceTree = "<group>";
+		};
+		B0D9B761239DCFC3005CB4FA /* ShowFilterView */ = {
+			isa = PBXGroup;
+			children = (
+				B0D9B762239DCFC3005CB4FA /* ShowFilterViewController.swift */,
+			);
+			path = ShowFilterView;
+			sourceTree = "<group>";
+		};
+		B0D9B764239DCFC7005CB4FA /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				B0D9B765239DCFC7005CB4FA /* ShowAVPlayerViewController.swift */,
+			);
+			path = AVPlayer;
+			sourceTree = "<group>";
+		};
+		B0D9B767239DCFC9005CB4FA /* search+tableview */ = {
+			isa = PBXGroup;
+			children = (
+				B0D9B768239DCFC9005CB4FA /* ShowMySearchAndTableViewController.swift */,
+			);
+			path = "search+tableview";
+			sourceTree = "<group>";
+		};
+		B0D9B76A239DCFCD005CB4FA /* segmentView */ = {
+			isa = PBXGroup;
+			children = (
+				B0D9B76B239DCFCD005CB4FA /* ShowSegmentViewController.swift */,
+				B0D9B76C239DCFCD005CB4FA /* ListBaseViewController.swift */,
+			);
+			path = segmentView;
 			sourceTree = "<group>";
 		};
 		D64CB1419A94862360C6B2DE /* Pods */ = {
@@ -448,7 +495,9 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/JXSegmentedView/JXSegmentedView.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/QorumLogs/QorumLogs.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -461,7 +510,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXSegmentedView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QorumLogs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -503,20 +554,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0D9B76E239DCFCD005CB4FA /* ListBaseViewController.swift in Sources */,
 				B04ECC82238D28990068957D /* ShowMyViewViewController.swift in Sources */,
 				B04ECC86238D28990068957D /* MyWebViewController.swift in Sources */,
 				B04ECC87238D28990068957D /* MytableViewViewController.swift in Sources */,
+				B0D9B769239DCFC9005CB4FA /* ShowMySearchAndTableViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				B0D9B76D239DCFCD005CB4FA /* ShowSegmentViewController.swift in Sources */,
 				B04ECC5F238D28900068957D /* ShowDeviceInfoViewController.swift in Sources */,
 				B04ECC83238D28990068957D /* ShowMyViewDetailViewController.swift in Sources */,
 				B04ECC8B238D28990068957D /* KeyChainViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				B04ECC80238D28990068957D /* ShowPickerViewController.swift in Sources */,
 				B04ECC7B238D28990068957D /* StringViewController.swift in Sources */,
+				B0D9B766239DCFC7005CB4FA /* ShowAVPlayerViewController.swift in Sources */,
 				B04ECC61238D28900068957D /* ShowLocalImageViewController.swift in Sources */,
 				B04ECC88238D28990068957D /* MyAutoTableViewController.swift in Sources */,
 				B04ECC7D238D28990068957D /* RequestViewController.swift in Sources */,
 				B04ECC60238D28900068957D /* ShowNetImageViewController.swift in Sources */,
+				B0D9B763239DCFC3005CB4FA /* ShowFilterViewController.swift in Sources */,
 				B04ECC84238D28990068957D /* MyScrollViewController.swift in Sources */,
 				B04ECC5E238D28900068957D /* DateHelpViewController.swift in Sources */,
 				B04ECC89238D28990068957D /* MyMenuViewController.swift in Sources */,

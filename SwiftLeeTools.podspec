@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftLeeTools'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of SwiftLeeTools.'
 
 # This description is used to generate tags and improve search results.
@@ -44,7 +44,7 @@ Pod::Spec.new do |s|
   s.dependency 'QorumLogs'
   s.dependency 'SnapKit', '~> 4.0.0' #自动布局'
   # s.dependency 'Hero'
-  #   s.dependency 'IQKeyboardManagerSwift'
+  s.dependency 'IQKeyboardManagerSwift'
   s.dependency 'AlamofireImage'
   #  s.dependency 'SDWebImage'
   #  s.dependency 'DKCamera'
@@ -54,4 +54,5 @@ Pod::Spec.new do |s|
   s.dependency 'ImageSlideshow/Alamofire'
   s.dependency 'MJRefresh' #上拉刷新 下拉加载
   s.dependency 'SwiftDate', '~> 5.1.0'  #时间工具
+  s.dependency 'JXSegmentedView' #切换滚动式图 https://github.com/pujiaxin33/JXSegmentedView
 end

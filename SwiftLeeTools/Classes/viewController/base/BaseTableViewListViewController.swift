@@ -2,8 +2,8 @@
 //  BaseTableViewListViewController.swift
 //  TopsProSys
 //
-//  Created by topscommmac01 on 2018/10/24.
-//  Copyright © 2018年 com.topscommmac01. All rights reserved.
+//  Created by 350541732 on 11/26/2019.
+//  Copyright (c) 2019 350541732. All rights reserved.
 //
 
 import UIKit
@@ -20,7 +20,7 @@ open class BaseTableViewListViewController: BaseUIViewViewController{
     public let footer = MJRefreshAutoNormalFooter() //底部加载
     open var listDataMap:JSON = JSON()
     open var data :JSON = JSON()
-    open var url:String!
+    open var url:String?
     open var rows = ConstantsHelp.rows
     open var parameters:Parameters! =  [
         ConstantsHelp.pageTitle:1,
@@ -215,13 +215,13 @@ open class BaseTableViewListViewController: BaseUIViewViewController{
     @objc func refreshPage() {
         QL1("刷新")
         page = 1
-        loadDataMethod(url:url)
+        loadDataMethod(url:url ?? "")
     }
     
     @objc func loadMore() {
         showLoading(isSupportClick: true)
         page += 1
-        loadDataMethod(url:url)
+        loadDataMethod(url:url ?? "")
     }
     
     func loadDataMethod(url:String) {

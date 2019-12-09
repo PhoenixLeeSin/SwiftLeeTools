@@ -1,7 +1,8 @@
 //  CommonViews.swift
 //  TopsProSys
-//  Created by topscommmac01 on 2018/10/23.
-//  Copyright © 2018年 com.topscommmac01. All rights reserved.
+//  Created by 350541732 on 11/26/2019.
+//  Copyright (c) 2019 350541732. All rights reserved.
+//
 import Foundation
 import UIKit
 import SnapKit
@@ -440,7 +441,8 @@ public class CommonViews: NSObject{
     * @param contentTitles           展示内容 包括 'value','allowNull','type'
     * @param leftTitleWidth          左侧宽度
     */
-    public class func getApplyView(contentTitles:[[String:String]],leftTitleWidth:Int = ConstantsHelp.leftTitleWidth) -> UIView{
+    public class func getApplyView(contentTitles:[[String:String]],
+                                   leftTitleWidth:Int = ConstantsHelp.leftTitleWidth) -> UIView{
         let contentView = UIView()
         contentView.isUserInteractionEnabled = true
         var leftLabel = UILabel()
@@ -509,7 +511,9 @@ public class CommonViews: NSObject{
     * @param leftTitleWidth          左侧宽度
     * @param viewTag                 控件的Tag值
     */
-    public class func getApplyWithUIButton(contentTitles:[String:String],leftTitleWidth:Int = ConstantsHelp.leftTitleWidth,viewTag:Int = 1000) -> UIView{
+    public class func getApplyWithUIButton(contentTitles:[String:String],
+                                           leftTitleWidth:Int = ConstantsHelp.leftTitleWidth,
+                                           viewTag:Int = 1000) -> UIView{
         let contentView = UIView()
         contentView.isUserInteractionEnabled = true
         var leftLabel = UILabel()
@@ -564,7 +568,9 @@ public class CommonViews: NSObject{
     * @param leftTitleWidth          左侧宽度
     * @param viewTag                 控件的Tag值
     */
-    public class func getApplyWithUITextField(contentTitles:[String:String],leftTitleWidth:Int = ConstantsHelp.leftTitleWidth,viewTag:Int = 1000) -> UIView{
+    public class func getApplyWithUITextField(contentTitles:[String:String],
+                                              leftTitleWidth:Int = ConstantsHelp.leftTitleWidth,
+                                              viewTag:Int = 1000) -> UIView{
         let contentView = UIView()
         contentView.isUserInteractionEnabled = true
         var leftLabel = UILabel()
@@ -619,7 +625,9 @@ public class CommonViews: NSObject{
     * @param leftTitleWidth          左侧宽度
     * @param viewTag                 控件的Tag值
     */
-    public class func getApplyWithUITextView(contentTitles:[String:String],leftTitleWidth:Int = ConstantsHelp.leftTitleWidth,viewTag:Int = 1000) -> UIView{
+    public class func getApplyWithUITextView(contentTitles:[String:String],
+                                             leftTitleWidth:Int = ConstantsHelp.leftTitleWidth,
+                                             viewTag:Int = 1000) -> UIView{
         let contentView = UIView()
         contentView.isUserInteractionEnabled = true
         var leftLabel = UILabel()
@@ -672,13 +680,22 @@ public class CommonViews: NSObject{
     * @param json                    数据源
     * @param imageSquarIsHidden      方框是否隐藏
     * @param imageSquareColor        方框颜色
+    * @param imageName               方框图片资源
     * @param headerTitle             标题头
     * @param headerTitleIsHidden     标题是否隐藏
     * @param contentTitles           展示内容
     * @param isShowSeparatorUIView   是否展示分割线
     * @param leftTitleWidth          左侧宽度
     */
-    public class func getApplyNormalListView(json:JSON,imageSquarIsHidden:Bool = false,imageSquareColor:UIColor,headerTitle:String?,headerTitleIsHidden:Bool,contentTitles:[[String:String]],isShowSeparatorUIView:Bool = true,leftTitleWidth:Int = ConstantsHelp.leftTitleWidth) -> UIView{
+    public class func getApplyNormalListView(json:JSON,
+                                             imageSquarIsHidden:Bool = false,
+                                             imageSquareColor:UIColor? = nil,
+                                             imageName:String? = nil,
+                                             headerTitle:String?,
+                                             headerTitleIsHidden:Bool,
+                                             contentTitles:[[String:String]],
+                                             isShowSeparatorUIView:Bool = true,
+                                             leftTitleWidth:Int = ConstantsHelp.leftTitleWidth) -> UIView{
         
         let contentView = UIView()
         var leftLabel = UILabel()
@@ -694,9 +711,16 @@ public class CommonViews: NSObject{
                 make.left.equalToSuperview().offset(ConstantsHelp.leftMargin)
                 make.width.height.equalTo(20)
             }
-            imageSquare.layer.cornerRadius = 3.0
-            imageSquare.layer.masksToBounds = true
-            imageSquare.backgroundColor = imageSquareColor
+            if let imageSquareColor = imageSquareColor {
+                imageSquare.layer.cornerRadius = 3.0
+                imageSquare.layer.masksToBounds = true
+                imageSquare.backgroundColor = imageSquareColor
+            }
+            
+            if let imageName = imageName {
+                imageSquare.image = UIImage.init(named: imageName)
+            }
+
         }
         //添加标题
         if (headerTitle != nil){
@@ -822,10 +846,131 @@ public class CommonViews: NSObject{
         let separatorUIView = self.getSeparatorUIView()
         contentView.addSubview(separatorUIView)
         separatorUIView.snp.makeConstraints { (make) in
-            make.top.equalTo(rightLabel.snp.bottom).offset(ConstantsHelp.normalPadding)
             make.left.equalToSuperview()
             make.bottom.equalToSuperview().offset(-1)
         }
+        //根据contentTitles是否存在值约束separatorUIView的top
+        if contentTitles.count == 0 {
+            separatorUIView.snp.makeConstraints { (make) in
+               make.top.equalTo(lineView.snp.bottom).offset(0)
+            }
+        }else{
+            separatorUIView.snp.makeConstraints { (make) in
+               make.top.equalTo(rightLabel.snp.bottom).offset(ConstantsHelp.normalPadding)
+            }
+        }
+        return contentView
+    }
+    
+    //MARK:-生成筛选框视图
+    /**
+    * 生成筛选框视图
+    * @param headerTitle             标题头
+    * @param contentTitles           展示内容
+    * @param leftTitleWidth          左侧宽度
+    */
+    public class func getFilterView(headerTitle:String,
+                                    contentTitles:[[String:String]],
+                                    leftTitleWidth:Int = ConstantsHelp.leftTitleWidth,
+                                    cancleButtonTitle:String = "取消",
+                                    sureButtonTitle:String = "确定") -> UIView {
+        let contentView = UIView()
+        contentView.backgroundColor = .white
+        let headerL = UILabel()
+        let lineView = CommonViews.getLineView()
+        var leftLabel = UILabel()
+        var rightLabel = UIView()
+        //添加标题
+        headerL.numberOfLines = 0
+        headerL.lineBreakMode = .byWordWrapping
+        headerL.textAlignment = .center
+        headerL.font = UIFont.systemFont(ofSize: 20)
+        headerL.text = headerTitle
+        contentView.addSubview(headerL)
+        headerL.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(ConstantsHelp.topMargin)
+            make.left.equalToSuperview().offset(ConstantsHelp.leftMargin * 3 + ConstantsHelp.littlePadding)
+            make.right.equalToSuperview().offset(ConstantsHelp.rightMargin)
+        }
+        //添加分割线
+        contentView.addSubview(lineView)
+        lineView.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(ConstantsHelp.leftMargin)
+            make.right.equalToSuperview().offset(ConstantsHelp.rightMargin)
+            make.top.equalTo(headerL.snp.bottom).offset(ConstantsHelp.normalPadding)
+        }
+        //添加具体展示项目
+        for (index,value) in contentTitles.enumerated() {
+            leftLabel = UILabel()
+            leftLabel.textAlignment = .right
+            leftLabel.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            leftLabel.text = value["value"]! + NSLocalizedString("colon", comment: "")
+            leftLabel.adjustsFontSizeToFitWidth = true
+            contentView.addSubview(leftLabel)
+            leftLabel.snp.makeConstraints { (make) in
+                make.left.equalToSuperview()
+                make.width.equalTo(leftTitleWidth)
+            }
+            //判断index的情况
+            if index == 0 {
+                leftLabel.snp.makeConstraints { (make) in
+                    make.top.equalTo(lineView.snp.bottom).offset(ConstantsHelp.littlePadding)
+                }
+            }else{
+                leftLabel.snp.makeConstraints { (make) in
+                    make.top.equalTo(rightLabel.snp.bottom).offset(ConstantsHelp.normalPadding)
+                }
+            }
+            switch value["key"] {
+            case ConstantsHelp.UIViewType.uibutton.rawValue:
+                rightLabel = CommonViews.getPickUIButton("请选择\(value["value"]!)")
+            case ConstantsHelp.UIViewType.uitextField.rawValue:
+                rightLabel = CommonViews.getUITextFeild()
+                (rightLabel as! UITextField).placeholder = "请输入\(value["value"]!)"
+            default:
+                break;
+            }
+            contentView.addSubview(rightLabel)
+            rightLabel.tag = 1000+index
+            rightLabel.snp.makeConstraints { (make) in
+                make.left.equalTo(ConstantsHelp.littlePadding + leftTitleWidth)
+                make.right.equalTo(ConstantsHelp.rightMargin*2)
+                make.top.equalTo(leftLabel.snp.top)
+            }
+        }
+        
+        let lineView1 = CommonViews.getLineView()
+        contentView.addSubview(lineView1)
+        lineView1.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview()
+            make.top.equalTo(rightLabel.snp.bottom).offset(ConstantsHelp.normalPadding)
+        }
+        
+        let sureUIButton = CommonViews.getSubmitUIButton(sureButtonTitle)
+        sureUIButton.tag = 100100
+        contentView.addSubview(sureUIButton)
+        sureUIButton.snp.remakeConstraints { (make) in
+            make.top.equalTo(lineView1.snp.bottom).offset(15)
+            make.right.equalToSuperview().offset(ConstantsHelp.rightMargin * 2)
+            make.width.equalToSuperview().multipliedBy(0.3)
+        }
+        
+        let cancelUIButton = CommonViews.getSubmitUIButton(cancleButtonTitle)
+        cancelUIButton.tag = 101101
+        cancelUIButton.setTitleColor(.black, for: .normal)
+        cancelUIButton.layer.backgroundColor =  CGColor.CGColorFromRGB(rgbValue: 0xffffff)
+        cancelUIButton.layer.borderColor = CGColor.CGColorFromRGB(rgbValue: 0x737373)
+        contentView.addSubview(cancelUIButton)
+        cancelUIButton.snp.remakeConstraints { (make) in
+            make.top.equalTo(lineView1.snp.bottom).offset(15)
+            make.left.equalToSuperview().offset(ConstantsHelp.normalPadding * 2)
+            make.width.equalToSuperview().multipliedBy(0.3)
+        }
+        
+        contentView.snp.makeConstraints { (make) in
+            make.bottom.equalTo(cancelUIButton.snp.bottom).offset(ConstantsHelp.normalPadding)
+        }
+        contentView.layer.cornerRadius = 8.0
         return contentView
     }
 }

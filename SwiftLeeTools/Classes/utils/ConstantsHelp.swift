@@ -1,8 +1,8 @@
 //
 //  ConstantsHelp.swift
 //  Alamofire
-//
-//  Created by topscommmac01_lixiaojin on 2019/5/28.
+//  Created by 350541732 on 11/26/2019.
+//  Copyright (c) 2019 350541732. All rights reserved.
 //
 
 import Foundation
@@ -72,6 +72,34 @@ public class ConstantsHelp: NSObject {
     //item 每行高度
     public static let itemRowHeight = 35
     
+    //MARK:- 获取keywindow
+    @available(iOS 13.0, *)
+    public class func getCurrentWindowoOnIOS13() -> UIWindow? {
+        return UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .map({$0 as? UIWindowScene})
+            .compactMap({$0})
+            .first?.windows
+            .filter({$0.isKeyWindow}).first
+    }
+    public class func getCurrentWindowBeforeIOS13() -> UIWindow? {
+        return UIApplication.shared.keyWindow
+    }
+    //MARK:- 获取keywindow
+    public class func keywindows() -> UIWindow? {
+        var window:UIWindow? = nil
+        if #available(iOS 13.0, *) {
+            for windowScene:UIWindowScene in ((UIApplication.shared.connectedScenes as? Set<UIWindowScene>)!) {
+                if windowScene.activationState == .foregroundActive {
+                    window = windowScene.windows.first
+                    break
+                }
+            }
+            return window
+        }else{
+            return UIApplication.shared.keyWindow
+        }
+    }
 }
 
 
@@ -228,3 +256,4 @@ extension ConstantsHelp{
         case uitextview = "uitextview"
     }
 }
+

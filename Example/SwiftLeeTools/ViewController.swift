@@ -39,10 +39,14 @@ class ViewController: BaseMenuUICollectionViewViewController {
                          ["title": "基础控制器", "image": "AppIcon"],
                          ["title": "本地推送", "image": "AppIcon"],
                          ["title": "基本视图", "image": "AppIcon"],
-                         ["title": "选择器", "image": "AppIcon"]
+                         ["title": "选择器", "image": "AppIcon"],
+                         ["title": "滑动/点击切换", "image": "AppIcon"],
+                         ["title": "搜索+列表", "image": "AppIcon"],
+                         ["title": "视频播放", "image": "AppIcon"],
+                         ["title": "筛选框", "image": "AppIcon"]
         ]
         super.viewDidLoad()
-        title = "TITLE"
+        title = "Topscomm"
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -75,6 +79,14 @@ class ViewController: BaseMenuUICollectionViewViewController {
             showNormalView()
         case 13:
             showPickerView()
+        case 14:
+            showSegmentView()
+        case 15:
+            showSearchAndTable()
+        case 16:
+            showAVPlayer()
+        case 17:
+            showFilter()
         default:
             print("no way to go")
         }
@@ -198,7 +210,30 @@ class ViewController: BaseMenuUICollectionViewViewController {
         viewController.title = "基本视图"
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    //切换/点击视图
+    func showSegmentView(){
+        let viewController = ShowSegmentListViewController()
+        viewController.title = "基本视图"
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    //搜索+列表
+    func showSearchAndTable() {
+        let viewController = ShowMySearchAndTableViewController()
+        viewController.title = "基本搜索列表"
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+    }
+    //AVplayer
+    func showAVPlayer() {
+        let viewController = ShowAVPlayerViewController()
+        viewController.title = "视频播放"
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    //Filter
+    func showFilter() {
+        let viewController = ShowFilterViewController()
+        viewController.title = "筛选框"
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }
-
-
 

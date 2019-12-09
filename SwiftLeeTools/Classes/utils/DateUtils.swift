@@ -2,8 +2,8 @@
 //  DateUtil.swift
 //  TopsProSys
 //
-//  Created by 李天星 on 2018/11/16.
-//  Copyright © 2018年 com.topscommmac01. All rights reserved.
+//  Created by 350541732 on 11/26/2019.
+//  Copyright (c) 2019 350541732. All rights reserved.
 //
 
 import Foundation
