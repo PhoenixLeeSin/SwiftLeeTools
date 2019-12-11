@@ -43,7 +43,8 @@ class ViewController: BaseMenuUICollectionViewViewController {
                          ["title": "滑动/点击切换", "image": "AppIcon"],
                          ["title": "搜索+列表", "image": "AppIcon"],
                          ["title": "视频播放", "image": "AppIcon"],
-                         ["title": "筛选框", "image": "AppIcon"]
+                         ["title": "筛选框", "image": "AppIcon"],
+                         ["title": "NetWork网络请求", "image": "AppIcon"],
         ]
         super.viewDidLoad()
         title = "Topscomm"
@@ -87,6 +88,8 @@ class ViewController: BaseMenuUICollectionViewViewController {
             showAVPlayer()
         case 17:
             showFilter()
+        case 18:
+            showNetwork()
         default:
             print("no way to go")
         }
@@ -233,6 +236,12 @@ class ViewController: BaseMenuUICollectionViewViewController {
     func showFilter() {
         let viewController = ShowFilterViewController()
         viewController.title = "筛选框"
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    //Network
+    func showNetwork() {
+        let viewController = ShowMyNetWorkViewController()
+        viewController.title = "Network"
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

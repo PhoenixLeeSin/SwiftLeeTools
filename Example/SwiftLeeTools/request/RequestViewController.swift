@@ -69,6 +69,8 @@ class RequestViewController: BaseUIViewViewController {
         let url = "http://172.20.3.53:8919/toa/toa/toaMobileLogin_login.json";
         getResultMap(urlRequest: url, parameters: parameters) { (json) in
             self.showAlert(message: "json = \(json)")
+            
+             UserDefaults.standard.set(json["token"].stringValue, forKey: "token")
         }
     }
     

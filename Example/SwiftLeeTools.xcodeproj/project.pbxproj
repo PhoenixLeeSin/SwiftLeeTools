@@ -34,6 +34,7 @@
 		B04ECC89238D28990068957D /* MyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC76238D28990068957D /* MyMenuViewController.swift */; };
 		B04ECC8A238D28990068957D /* ShowLocalNotiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC78238D28990068957D /* ShowLocalNotiViewController.swift */; };
 		B04ECC8B238D28990068957D /* KeyChainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04ECC7A238D28990068957D /* KeyChainViewController.swift */; };
+		B0580C5723A0CE8600506737 /* ShowMyNetWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0580C5623A0CE8600506737 /* ShowMyNetWorkViewController.swift */; };
 		B0D9B763239DCFC3005CB4FA /* ShowFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9B762239DCFC3005CB4FA /* ShowFilterViewController.swift */; };
 		B0D9B766239DCFC7005CB4FA /* ShowAVPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9B765239DCFC7005CB4FA /* ShowAVPlayerViewController.swift */; };
 		B0D9B769239DCFC9005CB4FA /* ShowMySearchAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9B768239DCFC9005CB4FA /* ShowMySearchAndTableViewController.swift */; };
@@ -94,6 +95,7 @@
 		B04ECC76238D28990068957D /* MyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuViewController.swift; sourceTree = "<group>"; };
 		B04ECC78238D28990068957D /* ShowLocalNotiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowLocalNotiViewController.swift; sourceTree = "<group>"; };
 		B04ECC7A238D28990068957D /* KeyChainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainViewController.swift; sourceTree = "<group>"; };
+		B0580C5623A0CE8600506737 /* ShowMyNetWorkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMyNetWorkViewController.swift; sourceTree = "<group>"; };
 		B0D9B762239DCFC3005CB4FA /* ShowFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowFilterViewController.swift; sourceTree = "<group>"; };
 		B0D9B765239DCFC7005CB4FA /* ShowAVPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowAVPlayerViewController.swift; sourceTree = "<group>"; };
 		B0D9B768239DCFC9005CB4FA /* ShowMySearchAndTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMySearchAndTableViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		607FACD21AFB9204008FA782 /* Example for SwiftLeeTools */ = {
 			isa = PBXGroup;
 			children = (
+				B0580C5523A0CE8600506737 /* Network */,
 				B0D9B76A239DCFCD005CB4FA /* segmentView */,
 				B0D9B767239DCFC9005CB4FA /* search+tableview */,
 				B0D9B764239DCFC7005CB4FA /* AVPlayer */,
@@ -302,6 +305,14 @@
 				B04ECC7A238D28990068957D /* KeyChainViewController.swift */,
 			);
 			path = keychain;
+			sourceTree = "<group>";
+		};
+		B0580C5523A0CE8600506737 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B0580C5623A0CE8600506737 /* ShowMyNetWorkViewController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		B0D9B761239DCFC3005CB4FA /* ShowFilterView */ = {
@@ -568,6 +579,7 @@
 				B04ECC80238D28990068957D /* ShowPickerViewController.swift in Sources */,
 				B04ECC7B238D28990068957D /* StringViewController.swift in Sources */,
 				B0D9B766239DCFC7005CB4FA /* ShowAVPlayerViewController.swift in Sources */,
+				B0580C5723A0CE8600506737 /* ShowMyNetWorkViewController.swift in Sources */,
 				B04ECC61238D28900068957D /* ShowLocalImageViewController.swift in Sources */,
 				B04ECC88238D28990068957D /* MyAutoTableViewController.swift in Sources */,
 				B04ECC7D238D28990068957D /* RequestViewController.swift in Sources */,

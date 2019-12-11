@@ -421,3 +421,121 @@ extension BaseUIViewViewController{
 
 }
 
+extension BaseUIViewViewController {
+    //MARK:-基础请求
+    open func requestDataWith(url: String,
+                              param:Parameters,
+                              method: HTTPMethod = .post,
+                              dataKey: DataKey,
+                              headers: [String:String],
+                              isSupportClick:Bool = true,
+                              isNeedRetrier: Bool = true,
+                              success: @escaping Success<JSON>,
+                              failure: @escaping Failure) {
+        
+        showLoading(isSupportClick: isSupportClick)
+        
+        
+        NetWorkTools.getNormalRequestWith(url: url,
+                                          param: param,
+                                          method: method,
+                                          dataKey: dataKey,
+                                          headers: headers,
+                                          isNeedRetrier: isNeedRetrier,
+                                          success: { (json) in
+                                            self.hideHUD()
+                                            success(json)
+        }) { (errorCode) in
+            self.hideHUD()
+            self.dealWith(errorCode: errorCode)
+        }
+    }
+    /**
+     * 基本上传方法
+     * @param url             请求地址
+     * @param keys            参数
+     * @param parameters      整个数据
+     * @param datasArr        数据信息
+     * @param datasInfoArr    数据信息描述
+     * @param isNeedReConnect 需要重连 默认true 重连3次
+     * @param success         成功回调
+     * @param failure         失败回调
+     */
+    open func uploadFileWith(url: String,
+                               keys: [String],
+                               parameters: JSON,
+                               datasArr:[Data],
+                               datasInfoArr:[String],
+                               isNeedRetrier: Bool = true,
+                               isSupportClick:Bool = true,
+                               headers: [String:String],
+                               success: @escaping Success<JSON>,
+                               failure: @escaping Failure) {
+        
+        showLoading(isSupportClick: isSupportClick)
+        
+        NetWorkTools.uploadRequestWith(url: url,
+                                       keys: keys,
+                                       parameters: parameters,
+                                       datasArr: datasArr,
+                                       datasInfoArr: datasInfoArr,
+                                       isNeedRetrier: isNeedRetrier,
+                                       headers: headers, success: { (json) in
+                                        
+                                        self.hideHUD()
+                                        success(json)
+        }) { (errorCode) in
+            self.hideHUD()
+            self.dealWith(errorCode: errorCode)
+        }
+    }
+    /**
+     * 基本下载方法
+     * @param url             请求地址
+     * @param isNeedReConnect 需要重连 默认true 重连3次
+     * @param method          HTTPMethod
+     * @param params          Parameters
+     * @param headers         [String:String]
+     * @param success         成功回调
+     * @param failure         失败回调
+     */
+    open func downloadFileWith(url: String,
+                               method: HTTPMethod = .post,
+                               params: Parameters,
+                               headers: [String:String],
+                               isSupportClick:Bool = true,
+                               isNeedRetrier: Bool = true,
+                               success: @escaping Success<String>,
+                               failure: @escaping Failure) {
+        
+        showLoading(isSupportClick: isSupportClick)
+        
+        NetWorkTools.downloadFileWith(url: url,
+                                      params: params,
+                                      headers: headers,
+                                      success: { (path) in
+                                        self.hideHUD()
+                                        success(path)
+        }) { (errorCode) in
+            self.hideHUD()
+            self.dealWith(errorCode: errorCode)
+        }
+    }
+}
+
+extension BaseUIViewViewController {
+    open func dealWith(errorCode:ErrorCode) {
+        switch errorCode {
+        case .invalidResponse(let message):
+            self.showAlert(message: message)
+        case .networkUnavailable(let errorMessage,let statusCode):
+            //MARK:-处理
+            if let errorMessage = errorMessage {
+                QL1(statusCode)
+                self.showAlert(message: errorMessage)
+            }
+        case .sysError(let message):
+            self.showAlert(message: message)
+        }
+    }
+}
