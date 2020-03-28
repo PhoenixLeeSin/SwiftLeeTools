@@ -15,13 +15,16 @@ SwiftLeeTools使用swift语言，结合公司的项目封装了一些基础通�
 基础视图（根据提供key value，生成view） 选择器  分页视图  seachcontroller+tableview AVPlayer  弹出的筛选框。
 ###### 小白一枚，第一次写这个三方库，这个工具借鉴了公司同事以及git上一些优秀的开源作品，写的不好，只希望给大家提供一点帮助和发散思维。大佬觉得凑和就给个✨吧~~😘😘
 
+######
+2020/03/28更新:增加利用系统PDFKit加载PDF的视图控制器封装；增加realmManger封装；增加加密解密封装；segment分段指示器新增以BaseUIViewController为listcontainner的通用类型封装；
+下面的示例Gif展示了个别功能；相信信息可以下载后运行示例工程查看。
 
 ## Example
 
-
-
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 run SwiftLeeTools-Example and u can see like this.
+<img src="https://github.com/350541732/LeeImages/blob/master/uPic/swiftLeeTools.gif" width=200 height=360 />
+
 
 
 
