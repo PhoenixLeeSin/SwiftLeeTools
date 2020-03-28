@@ -66,7 +66,7 @@ class ShowMyNetWorkViewController: BaseUIViewViewController {
             "invoicedate" : "2019-12-10"]
             let params = JSON(dic)
             let image = UIImage(named: "2")!
-            let data = UIImagePNGRepresentation(image)!
+            let data = image.pngData()!
             if UserDefaults.standard.value(forKey: "token") == nil {
                 self.showAlert(message: "在http请求里登陆一下")
                 return

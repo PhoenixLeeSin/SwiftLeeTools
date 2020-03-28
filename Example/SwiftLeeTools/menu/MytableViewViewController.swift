@@ -32,7 +32,7 @@ class MytableViewViewController: BaseTableViewListViewController ,UITableViewDel
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.separatorStyle = .none
         tableView?.estimatedRowHeight = CGFloat(ConstantsHelp.itemRowHeight * 3)
-        tableView?.rowHeight = UITableViewAutomaticDimension
+        tableView?.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView(frame:CGRect(x:0, y: 0, width: ConstantsHelp.SCREENWITH, height:10))
     }
     func refreshWith(index:Int){
