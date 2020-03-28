@@ -30,11 +30,11 @@ class JHTextView: UITextView {
     //MARK: -- 初始化 --
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
-         NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: .UITextViewTextDidChange, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: UITextView.textDidChangeNotification, object: self)
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-         NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: .UITextViewTextDidChange, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: UITextView.textDidChangeNotification, object: self)
     }
    /// 初始化
    ///
@@ -47,7 +47,7 @@ class JHTextView: UITextView {
         self.placeHolder = placeHolder ?? ""
         self.placeHolderColor = placeHolderColor ?? UIColor.gray
         self.MaxCount = MaxCount ?? 0
-         NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: .UITextViewTextDidChange, object: self)
+    NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: UITextView.textDidChangeNotification, object: self)
     }
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -83,14 +83,14 @@ extension JHTextView{
             return
         }
         let attrs = NSMutableDictionary.init()
-        attrs.setValue(self.font, forKey: NSAttributedStringKey.font.rawValue)
-        attrs.setValue(self.placeHolderColor, forKey: NSAttributedStringKey.foregroundColor.rawValue)
+        attrs.setValue(self.font, forKey: NSAttributedString.Key.font.rawValue)
+        attrs.setValue(self.placeHolderColor, forKey: NSAttributedString.Key.foregroundColor.rawValue)
         let x:CGFloat  = 8.0
         let y:CGFloat  = 8.0
         let widht  = rect.size.width - 2 * x
         let height  = rect.size.height  - 2 * y
         let tempRect = CGRect.init(x: x, y: y, width:widht, height: height)
-        self.placeHolder.draw(in: tempRect, withAttributes:attrs as? [NSAttributedStringKey : Any])
+        self.placeHolder.draw(in: tempRect, withAttributes:attrs as? [NSAttributedString.Key : Any])
     }
     
     //绘制文本限制数量
@@ -108,15 +108,15 @@ extension JHTextView{
         let limitFont = self.font ?? UIFont.systemFont(ofSize: 15)
         
         let attrs = NSMutableDictionary.init()
-        attrs.setValue(self.textColor, forKey: NSAttributedStringKey.foregroundColor.rawValue)
-        attrs.setValue(limitFont, forKey: NSAttributedStringKey.font.rawValue)
+        attrs.setValue(self.textColor, forKey: NSAttributedString.Key.foregroundColor.rawValue)
+        attrs.setValue(limitFont, forKey: NSAttributedString.Key.font.rawValue)
         //计算文本宽度
         let size = CGSize(width:CGFloat.greatestFiniteMagnitude, height:0)
-        let limitRect = limitText.boundingRect(with: size, options:.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : limitFont], context:nil)
+        let limitRect = limitText.boundingRect(with: size, options:.usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : limitFont], context:nil)
         let width:CGFloat = limitRect.size.width + 10
         let height:CGFloat = 30
         let tempRect = CGRect.init(x: rect.size.width - width, y: rect.size.height - height, width:width, height: height)
-        limitText.draw(in: tempRect, withAttributes:attrs as? [NSAttributedStringKey : Any])
+        limitText.draw(in: tempRect, withAttributes:attrs as? [NSAttributedString.Key : Any])
   
     }
     

@@ -34,7 +34,7 @@ public class NotificationManager: NSObject {
         content.title = title
         content.subtitle = subtitle
         content.body = body
-        content.sound = UNNotificationSound.default()
+        content.sound = UNNotificationSound.default
         if badge != nil{
             content.badge = badge
         }

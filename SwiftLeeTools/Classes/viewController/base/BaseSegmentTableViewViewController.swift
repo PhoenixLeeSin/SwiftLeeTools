@@ -38,7 +38,7 @@ open class BaseSegmentTableViewViewController: BaseTableViewListViewController,U
         } else {
             self.automaticallyAdjustsScrollViewInsets = false
         }
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100.0
         tableView.separatorStyle = .none
         tableView.delegate = self

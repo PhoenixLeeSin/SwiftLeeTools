@@ -89,7 +89,7 @@ extension UIImage{
     }
     ///压缩图片
     public func compressedData(quality: CGFloat = 0.5) -> Data? {
-        return UIImageJPEGRepresentation(self, quality)
+        return self.jpegData(compressionQuality: quality)
     }
     /// 旋转指定角度
     public func rotate(radians: Float) -> UIImage {

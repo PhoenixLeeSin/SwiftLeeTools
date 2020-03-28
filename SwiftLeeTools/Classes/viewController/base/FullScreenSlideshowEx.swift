@@ -51,8 +51,8 @@ extension FullScreenSlideshowViewController{
                 make.left.right.equalToSuperview()
                 make.bottom.equalTo(rotateUIButton)
             }
-            view.bringSubview(toFront: closeButton)
-            view.bringSubview(toFront: rotateUIButton)
+            view.bringSubviewToFront(closeButton)
+            view.bringSubviewToFront(rotateUIButton)
         }
     }
     

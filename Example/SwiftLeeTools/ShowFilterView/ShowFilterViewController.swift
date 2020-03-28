@@ -3,7 +3,7 @@
 //  SwiftLeeTools_Example
 //
 //  Created by 李桂盛 on 2019/12/7.
-//  Copyright © 2019 李效晋. All rights reserved.
+//  Copyright © 2019 李桂盛. All rights reserved.
 //
 
 import UIKit

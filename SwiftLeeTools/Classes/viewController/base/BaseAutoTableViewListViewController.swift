@@ -21,7 +21,7 @@ open class BaseAutoTableViewListViewController: BaseTableViewListViewController,
         tableView.delegate = self
         tableView.dataSource = self
         tableView?.estimatedRowHeight = CGFloat((itemContent.count) * ConstantsHelp.itemRowHeight + ConstantsHelp.largePadding)
-        tableView?.rowHeight = UITableViewAutomaticDimension
+        tableView?.rowHeight = UITableView.automaticDimension
         //开始下拉刷新
         tableView.mj_header!.beginRefreshing()
     }

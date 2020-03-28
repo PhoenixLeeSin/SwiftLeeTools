@@ -96,7 +96,7 @@ open class BaseAVPlayerViewController: BaseUIViewViewController {
             // 监听状态改变
             self.playItem.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions.new, context: nil)
             self.link = CADisplayLink.init(target: self, selector: #selector(self.updateTime))
-            self.link?.add(to: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
+            self.link?.add(to: RunLoop.main, forMode: RunLoop.Mode.default)
             self.setupUI()
         }
     }
@@ -242,7 +242,7 @@ open class BaseAVPlayerViewController: BaseUIViewViewController {
     @objc func sliderTouchUpOut(_ slider:UISlider){
         if self.player.status == .readyToPlay {
             let duration = slider.value * Float(CMTimeGetSeconds(self.player.currentItem!.duration))
-            let seekTime = CMTimeMake(Int64(duration), 1)
+            let seekTime = CMTimeMake(value: Int64(duration), timescale: 1)
             self.player.seek(to: seekTime) { _ in
                 self.sliding = false
             }
@@ -260,7 +260,7 @@ open class BaseAVPlayerViewController: BaseUIViewViewController {
 
                 }else if keyPath == "status"{
         //            AVPlayerItemStatusUnknown,AVPlayerItemStatusReadyToPlay, AVPlayerItemStatusFailed。只有当status为AVPlayerItemStatusReadyToPlay是调用 AVPlayer的play方法视频才能播放。
-                    if playerItem.status == AVPlayerItemStatus.readyToPlay{
+                    if playerItem.status == AVPlayerItem.Status.readyToPlay{
                         // 只有在这个状态下才能播放
                         self.player.play()
                     }else{

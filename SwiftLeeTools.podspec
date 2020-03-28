@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftLeeTools'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'A short description of SwiftLeeTools.'
 
 # This description is used to generate tags and improve search results.
@@ -55,4 +55,7 @@ Pod::Spec.new do |s|
   s.dependency 'MJRefresh' #上拉刷新 下拉加载
   s.dependency 'SwiftDate', '~> 5.1.0'  #时间工具
   s.dependency 'JXSegmentedView' #切换滚动式图 https://github.com/pujiaxin33/JXSegmentedView
+  s.dependency 'ReachabilitySwift'
+  s.dependency 'RealmSwift' #Realm 数据库
+  s.dependency 'CryptoSwift'#加密
 end

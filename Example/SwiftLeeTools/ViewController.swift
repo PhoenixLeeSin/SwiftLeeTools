@@ -45,6 +45,9 @@ class ViewController: BaseMenuUICollectionViewViewController {
                          ["title": "视频播放", "image": "AppIcon"],
                          ["title": "筛选框", "image": "AppIcon"],
                          ["title": "NetWork网络请求", "image": "AppIcon"],
+                         ["title": "PDFKit", "image": "AppIcon"],
+                         ["title": "RealmDB", "image": "AppIcon"],
+                         ["title": "登录加密", "image": "AppIcon"],
         ]
         super.viewDidLoad()
         title = "Topscomm"
@@ -90,6 +93,12 @@ class ViewController: BaseMenuUICollectionViewViewController {
             showFilter()
         case 18:
             showNetwork()
+        case 19:
+            showPDF()
+        case 20:
+            showRealmDB()
+        case 21:
+            showCrypto()
         default:
             print("no way to go")
         }
@@ -243,6 +252,34 @@ class ViewController: BaseMenuUICollectionViewViewController {
         let viewController = ShowMyNetWorkViewController()
         viewController.title = "Network"
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    //showPDF
+    func showPDF() {
+        
+        if #available(iOS 11.0, *) {
+            let viewController = ShowPDFViewController()
+            viewController.title = "showPDF"
+            self.navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            
+        }
+        
+    }
+    //showRealmDB()
+    func showRealmDB() {
+        let viewController = RealmDBViewController()
+        viewController.title = "RealmDB"
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    //showCrypto()
+    func showCrypto() {
+        
+        let viewController = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "Crypto") as UIViewController
+        viewController.title = "Crypto"
+        //        print(viewController.view.subviews)
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
     }
 }
 

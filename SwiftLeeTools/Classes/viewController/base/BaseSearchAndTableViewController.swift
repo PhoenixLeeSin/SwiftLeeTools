@@ -35,7 +35,7 @@ open class BaseSearchAndTableViewController: BaseTableViewListViewController,UIT
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = 100.0
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         searchController.searchResultsUpdater = self

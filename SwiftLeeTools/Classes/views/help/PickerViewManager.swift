@@ -169,7 +169,7 @@ public class PickerViewManager: UIView {
 extension PickerViewManager {
     
     fileprivate func addOrentationObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.statusBarOrientationChange), name: NSNotification.Name.UIApplicationDidChangeStatusBarOrientation, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.statusBarOrientationChange), name: UIApplication.didChangeStatusBarOrientationNotification, object: nil)
         
     }
     // 屏幕旋转时移除pickerView

@@ -13,7 +13,7 @@ import QorumLogs
 open class BaseMenuUICollectionViewViewController: BaseUIScrollViewViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     open var collectionView : UICollectionView?
-    open let Identifier    = "MenuCollectionViewCell"
+    public let Identifier    = "MenuCollectionViewCell"
     open var buttonColCount:Int = 4 //每行显示4个功能菜单
     //图标宽度
     open var width:CGFloat!

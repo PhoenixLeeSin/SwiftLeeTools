@@ -311,7 +311,7 @@ public class SwiftLoadingTool: UIView {
     }()
     /// 系统菊花
     lazy var loadingTool: UIActivityIndicatorView = {
-        let tool = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+        let tool = UIActivityIndicatorView.init(style: .whiteLarge)
         tool.hidesWhenStopped = true
         
         return tool

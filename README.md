@@ -21,6 +21,7 @@ SwiftLeeTools使用swift语言，结合公司的项目封装了一些基础通�
 
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+run SwiftLeeTools-Example and u can see like this.
 
 
 
