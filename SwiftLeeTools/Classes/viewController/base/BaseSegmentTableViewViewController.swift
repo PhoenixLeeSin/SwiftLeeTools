@@ -77,8 +77,3 @@ extension BaseSegmentTableViewViewController{
         self.didSelectedCellWithIndexWith(json: json, index: index)
     }
 }
-extension BaseSegmentTableViewViewController: JXSegmentedListContainerViewListDelegate {
-    open  func listView() -> UIView {
-        return view
-    }
-}

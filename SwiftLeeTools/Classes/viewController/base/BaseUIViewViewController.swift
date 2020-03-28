@@ -539,3 +539,8 @@ extension BaseUIViewViewController {
         }
     }
 }
+extension BaseUIViewViewController: JXSegmentedListContainerViewListDelegate {
+    open  func listView() -> UIView {
+        return view
+    }
+}

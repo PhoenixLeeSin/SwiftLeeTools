@@ -40,6 +40,7 @@
 		B0764BB0242EFCBE0047FE54 /* ShowPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0764BAF242EFCBE0047FE54 /* ShowPDFViewController.swift */; };
 		B0764BB2242EFE200047FE54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0764BB1242EFE200047FE54 /* Main.storyboard */; };
 		B0764BB4242EFFCC0047FE54 /* 未命名.gif in Resources */ = {isa = PBXBuildFile; fileRef = B0764BB3242EFFCC0047FE54 /* 未命名.gif */; };
+		B0764BB7242F31040047FE54 /* ListBaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0764BB6242F31040047FE54 /* ListBaseUIViewController.swift */; };
 		B0D9B763239DCFC3005CB4FA /* ShowFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9B762239DCFC3005CB4FA /* ShowFilterViewController.swift */; };
 		B0D9B766239DCFC7005CB4FA /* ShowAVPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9B765239DCFC7005CB4FA /* ShowAVPlayerViewController.swift */; };
 		B0D9B769239DCFC9005CB4FA /* ShowMySearchAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9B768239DCFC9005CB4FA /* ShowMySearchAndTableViewController.swift */; };
@@ -106,6 +107,7 @@
 		B0764BAF242EFCBE0047FE54 /* ShowPDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPDFViewController.swift; sourceTree = "<group>"; };
 		B0764BB1242EFE200047FE54 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B0764BB3242EFFCC0047FE54 /* 未命名.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "未命名.gif"; sourceTree = "<group>"; };
+		B0764BB6242F31040047FE54 /* ListBaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBaseUIViewController.swift; sourceTree = "<group>"; };
 		B0D9B762239DCFC3005CB4FA /* ShowFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowFilterViewController.swift; sourceTree = "<group>"; };
 		B0D9B765239DCFC7005CB4FA /* ShowAVPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowAVPlayerViewController.swift; sourceTree = "<group>"; };
 		B0D9B768239DCFC9005CB4FA /* ShowMySearchAndTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMySearchAndTableViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				B0764BB3242EFFCC0047FE54 /* 未命名.gif */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for SwiftLeeTools */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -215,7 +218,6 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				B0764BB3242EFFCC0047FE54 /* 未命名.gif */,
 				6AA6A54ADA9AEAC2E9E13DB8 /* SwiftLeeTools.podspec */,
 				03C2BC4490E296939E32771F /* README.md */,
 				82C20FB9D9821A6FF5DFB687 /* LICENSE */,
@@ -383,6 +385,7 @@
 			children = (
 				B0D9B76B239DCFCD005CB4FA /* ShowSegmentViewController.swift */,
 				B0D9B76C239DCFCD005CB4FA /* ListBaseViewController.swift */,
+				B0764BB6242F31040047FE54 /* ListBaseUIViewController.swift */,
 			);
 			path = segmentView;
 			sourceTree = "<group>";
@@ -642,6 +645,7 @@
 				B04ECC89238D28990068957D /* MyMenuViewController.swift in Sources */,
 				B04ECC7C238D28990068957D /* VerifyDataViewController.swift in Sources */,
 				B04ECC85238D28990068957D /* MyListMenuViewController.swift in Sources */,
+				B0764BB7242F31040047FE54 /* ListBaseUIViewController.swift in Sources */,
 				B04ECC8A238D28990068957D /* ShowLocalNotiViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,9 @@ class ShowSegmentViewController: BaseSegmentedViewController {
     let dotStatesArray = [false, true, true, true, false, false, true, true, false, true]
     let numbersArray = [1, 22, 333, 44444, 0, 66, 777, 0, 99999, 10]
     var type = 1
+    //选择tableview（列表）还是通用类型
+    var isTableOrCommon: Bool = true
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -30,7 +33,11 @@ class ShowSegmentViewController: BaseSegmentedViewController {
         var array: [String] = []
         
         for _ in titles{
-            array.append("ListBaseViewController")
+            if isTableOrCommon {
+                array.append("ListBaseViewController")
+            } else {
+                 array.append("ListBaseUIViewController")
+            }
         }
         switch type {
         case 0:
@@ -78,7 +85,8 @@ class ShowSegmentListViewController:BaseUIViewViewController{
         table.dataSource = self
         return table
     }()
-    let types = ["纯文字","文字和图片","红点","数字"]
+    let types = [["纯文字","文字和图片","红点","数字"],
+                ["更加通用的listContainner"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,18 +103,22 @@ class ShowSegmentListViewController:BaseUIViewViewController{
 
 }
 extension ShowSegmentListViewController:UITableViewDelegate,UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return types.count
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return types[section].count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = types[indexPath.row]
+        cell.textLabel?.text = types[indexPath.section][indexPath.row]
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     ///
         let vc = ShowSegmentViewController()
         vc.type = indexPath.row
+        vc.isTableOrCommon = indexPath.section == 0 ? true : false
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
