@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftLeeTools'
-  s.version          = '0.1.6'
+  s.version          = '0.1.6.1'
   s.summary          = 'A short description of SwiftLeeTools.'
 
   #指定版本
