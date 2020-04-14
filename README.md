@@ -23,7 +23,7 @@ SwiftLeeTools使用swift语言，结合公司的项目封装了一些基础通�
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 run SwiftLeeTools-Example and u can see like this.
-<img src="https://github.com/350541732/LeeImages/blob/master/uPic/swiftLeeTools.gif" width=200 height=360 />
+<img src="https://github.com/350541732/LeeImages/blob/master/uPic/swiftLeeTools.gif" width=400 height=360 />
 
 
 
