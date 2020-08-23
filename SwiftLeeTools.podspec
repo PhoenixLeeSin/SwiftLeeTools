@@ -58,6 +58,6 @@ Pod::Spec.new do |s|
   s.dependency 'SwiftDate', '~> 5.1.0'  #时间工具
   s.dependency 'JXSegmentedView', '~> 1.2.7' #切换滚动式图 https://github.com/pujiaxin33/JXSegmentedView
   s.dependency 'ReachabilitySwift', '5.0.0'
-  s.dependency 'RealmSwift','~> 5.3.5' #Realm 数据库
+  s.dependency 'RealmSwift','~> 5.3.5' , :modular_headers => true#Realm 数据库
   s.dependency 'CryptoSwift', '1.3.1'#加密
 end
