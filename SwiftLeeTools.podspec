@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftLeeTools'
-  s.version          = '0.1.6.1'
+  s.version          = '0.1.6.2'
   s.summary          = 'A short description of SwiftLeeTools.'
 
   #指定版本
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/350541732/SwiftLeeTools.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'SwiftLeeTools/Classes/**/*'
   
@@ -43,21 +43,21 @@ Pod::Spec.new do |s|
 
   s.dependency 'Alamofire', '~> 4.7' #网络请求
   s.dependency 'SwiftyJSON', '~> 4.0' #Json数据处理
-  s.dependency 'QorumLogs'
+  s.dependency 'QorumLogs', '~> 0.9'
   s.dependency 'SnapKit', '~> 4.0.0' #自动布局'
   # s.dependency 'Hero'
-  s.dependency 'IQKeyboardManagerSwift'
-  s.dependency 'AlamofireImage'
+  s.dependency 'IQKeyboardManagerSwift', '~> 6.5.6'
+  s.dependency 'AlamofireImage', '~> 3.6.0'
   #  s.dependency 'SDWebImage'
   #  s.dependency 'DKCamera'
   #  s.dependency 'DKPhotoGallery' #照片选取(包含SDWebImage)
   #  s.dependency 'DKImagePickerController', '<= 4.1.4' #照片选取
-  s.dependency 'DeviceKit'               #设备信息
-  s.dependency 'ImageSlideshow/Alamofire'
-  s.dependency 'MJRefresh' #上拉刷新 下拉加载
+  s.dependency 'DeviceKit'  , '3.2.0'             #设备信息
+  s.dependency 'ImageSlideshow/Alamofire','~> 1.8.3'
+  s.dependency 'MJRefresh', '~> 3.5.0' #上拉刷新 下拉加载
   s.dependency 'SwiftDate', '~> 5.1.0'  #时间工具
-  s.dependency 'JXSegmentedView' #切换滚动式图 https://github.com/pujiaxin33/JXSegmentedView
-  s.dependency 'ReachabilitySwift'
-  s.dependency 'RealmSwift' #Realm 数据库
-  s.dependency 'CryptoSwift'#加密
+  s.dependency 'JXSegmentedView', '~> 1.2.7' #切换滚动式图 https://github.com/pujiaxin33/JXSegmentedView
+  s.dependency 'ReachabilitySwift', '5.0.0'
+  s.dependency 'RealmSwift','~> 5.3.5' #Realm 数据库
+  s.dependency 'CryptoSwift', '1.3.1'#加密
 end
